@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h3::after {
+    content: "\25BC"; /* Unicode character for a down-pointing triangle */
+    float: right; /* Adjust the alignment */
+}
+
+/*** DEFAULT FONT FAMILY AND SIZES ***/
+
+.main_font h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}
+
+.main_font h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px,
+}
+
+.main_font h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px,
+}
+
+.main_font h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px,
+}
+
+.main_font h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px,
+}
+
+.main_font h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px,
+}
+
+.main_font p {
+    font-size: 18px
+}
+
+.main_font p,
+.main_font button,
+.main_font li,
+.main_font a {
+    font-family: 'Lora', serif;
+}
+
+@media only screen and (max-width: 767px) {
+    .main_font h1 {
+        font-size: 35px;
+    }
+    
+    .main_font h2 {
+        font-size: 29px,
+    }
+    
+    .main_font h3 {
+        font-size: 21px,
+    }
+    
+    .main_font h4 {
+        font-size: 17px,
+    }
+    
+    .main_font h5 {
+        font-size: 15px,
+    }
+    
+    .main_font h6 {
+        font-size: 12px,
+    }
+    
+    .main_font p {
+        font-size: 16px
+    }
+}
+
+/*** END ***/
