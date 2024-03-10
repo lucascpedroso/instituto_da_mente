@@ -4,10 +4,176 @@
     box-sizing: border-box;
 }
 
-h3::after {
-    content: "\25BC"; /* Unicode character for a down-pointing triangle */
-    float: right; /* Adjust the alignment */
+header {
+    padding: 20px 0;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
+
+header .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 20px;
+}
+
+
+header .heading .logo {
+    padding-right: 50px;
+}
+
+
+nav ul.nav_list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_list .nav_item {
+    padding: 5px 0 5px 46px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    color: #674223;
+    cursor: pointer;
+}
+
+.nav_list .nav_item:hover a {
+    border-bottom: 1px solid #674223;
+}
+
+.nav_list .nav_item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/**** MAIN ****/
+
+main.main_container {
+    margin-top: 70px;
+    background-color: #fffbf5;
+    height: 100vh;
+}
+
+/**** END ****/
+
+/**** HOME ****/
+
+.home .banner_container {
+    display: flex;
+    position: relative;
+}
+
+.home .banner {
+    padding-top: 40px;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner_text .text {
+    margin-bottom: 70px;
+}
+
+.banner_text h1,
+.banner_text h3,
+.banner_text p {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.banner_text .text h1 {
+    color: #42210B;
+    font-size: 70px;
+}
+
+.banner_text h3 {
+    text-align: end;
+    color: #8C6239
+}
+
+.banner_text p {
+    width: 100%;
+    max-width: 700px;
+    text-align: justify;
+    text-align-last: center;
+    margin-bottom: 70px;
+    color: #8C6239
+}
+
+.banner_image img {
+    width: 100%;
+    max-width: 315px;
+    border-radius: 45% 45% 0 0;
+}
+
+.main_button button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #8C6239;
+    border: 1px solid #8C6239;
+    color: #fff;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.main_button button:hover {
+    background-color: #674223;
+}
+
+.banner_nav_buttons button {
+    position: absolute;
+    top: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}
+
+.banner_nav_buttons .prev_button {
+    left: 0;
+}
+
+.banner_nav_buttons .next_button {
+    right: 0;
+}
+
+.banner_nav_buttons button::before {
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-left: 3px solid #707070;
+    border-bottom: 3px solid #707070;
+    transform-origin: center;
+    position: absolute;
+}
+
+.banner_nav_buttons .prev_button::before {
+    transform: translate(-50%, -60%) rotate(45deg);
+} 
+.banner_nav_buttons .next_button::before {
+    transform: translate(-50%, -60%) rotate(-136deg);
+}
+
+/**** END ****/
 
 /*** DEFAULT FONT FAMILY AND SIZES ***/
 
@@ -18,27 +184,27 @@ h3::after {
 
 .main_font h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px,
+    font-size: 32px;
 }
 
 .main_font h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px,
+    font-size: 24px;
 }
 
 .main_font h4 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 19px,
+    font-size: 19px;
 }
 
 .main_font h5 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px,
+    font-size: 16px;
 }
 
 .main_font h6 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 13px,
+    font-size: 13px;
 }
 
 .main_font p {
@@ -58,27 +224,27 @@ h3::after {
     }
     
     .main_font h2 {
-        font-size: 29px,
+        font-size: 29px;
     }
     
     .main_font h3 {
-        font-size: 21px,
+        font-size: 21px;
     }
     
     .main_font h4 {
-        font-size: 17px,
+        font-size: 17px;
     }
     
     .main_font h5 {
-        font-size: 15px,
+        font-size: 15px;
     }
     
     .main_font h6 {
-        font-size: 12px,
+        font-size: 12px;
     }
     
     .main_font p {
-        font-size: 16px
+        font-size: 16px;
     }
 }
 

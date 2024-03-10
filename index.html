@@ -5,40 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituto Da Mente</title>
     
+    <!-- Include Main Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Include MAIN CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            Logo aqui
+        <div class="heading">
+            <div class="logo">
+                Logo aqui
+            </div>
+            <nav>
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="">Home</a></li>
+                    <li class="nav_item"><a href="">Cursos</a></li>
+                    <li class="nav_item"><a href="">Atendimento Social</a></li>
+                    <li class="nav_item"><a href="">Blog</a></li>
+                    <li class="nav_item"><a href="">Dúvidas</a></li>
+                    <li class="nav_item"><a href="">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul class="nav_list">
-                <li class="nav_item">Home</li>
-                <li class="nav_item">Cursos</li>
-                <li class="nav_item">Atendimento Social</li>
-                <li class="nav_item">Blog</li>
-                <li class="nav_item">Contato</li>
-            </ul>
-        </nav>
     </header>
 
     <main class="main_container">
         <div class="main_content_container">
-            <section>
-                <div class="faq_heading">
-                    <h3>What is this?</h3>
+            <div class="home main_font">
+                <div class="banner_container">
+                    <section class="banner">
+                        <div class="banner_text">
+                            <div class="text">
+                                <h1> Instituto Da Mente</h1>
+                                <h3>Terapia para toda a família</h3>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quisquam impedit libero, animi molestiae quia quod fugit dolore ea id illo quos earum repudiandae perferendis nostrum repellendus nesciunt sapiente debitis?</p>
+                            <a href="" class="main_button">
+                                <button> Agende sua consulta</button>
+                            </a>
+                        </div>
+                        <div class="banner_image">
+                            <img src="images/banner-clinic.jpg" alt="">
+                        </div>
+                    </section>
+    
+                    <section class="banner">
+                        <div class="banner_text">
+                            <div class="text">
+                                <h1> Instituto Da Mente</h1>
+                                <h3>Cursos de Especialização e Extensão</h3>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quisquam impedit libero, animi molestiae quia quod fugit dolore ea id illo quos earum repudiandae perferendis nostrum repellendus nesciunt sapiente debitis?</p>
+                            <a href="" class="main_button">
+                                <button> Saiba Mais</button>
+                            </a>
+                        </div>
+                        <div class="banner_image">
+                            <img src="images/banner-study.jpg" alt="">
+                        </div>
+                    </section>
+
+                    <div class="banner_nav_buttons">
+                        <button class="prev_button"></button>
+                        <button class="next_button"></button>
+                    </div>
                 </div>
-                <p class="faq_response">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, dolore quisquam quam quasi voluptatum ea suscipit voluptate. Adipisci, consequatur. Eius dolor quae dolore! Ipsum, culpa. Quisquam ipsam aperiam sunt animi.</p>
-            </section>
+            </div>  
         </div>
     </main>
     
+
+
+    <script src="script.js"></script>
 </body>
 </html>
