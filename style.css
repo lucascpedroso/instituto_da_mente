@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/**** HEADER ****/
+
 header {
     padding: 20px 0;
     position: fixed;
@@ -54,6 +56,24 @@ nav ul.nav_list {
     color: inherit;
 }
 
+.mobile_hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile_hamburguer .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #42210B;
+}
+
+/**** END ****/
+
+
 /**** MAIN ****/
 
 main.main_container {
@@ -63,6 +83,90 @@ main.main_container {
 }
 
 /**** END ****/
+
+
+
+/**** FOOTER ****/
+
+footer {
+    background-color: #8b795d;
+}
+
+.footer_container {
+    padding: 30px 15px;
+}
+
+.footer_container ul {
+    list-style: none; 
+}
+
+.footer_container a {
+    text-decoration: none;
+}
+
+.footer_container .footer_content {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+
+.footer_content .footer_headers {
+    color: #42210B;
+}
+
+.address a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    letter-spacing: 2px;
+    color: #000000;
+    line-height: 30px;
+}
+
+.address svg {
+    width: 100%;
+    max-width: 22px;
+}
+
+.footer_nav_item:nth-child(n+2) {
+    padding-top: 20px;
+}
+
+.footer_nav_item a {
+    color: #42210B;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.footer_nav_item a:hover {
+    border-bottom: 1px solid #42210B;
+}
+
+.social_media  .footer_headers{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.social_media ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social_item img {
+    width: 35px;
+}
+
+
+/**** END ****/
+
+
 
 /**** HOME ****/
 
@@ -84,6 +188,7 @@ main.main_container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
 }
 
 .banner_text .text {
@@ -265,83 +370,150 @@ main.main_container {
 /**** END ****/
 
 
-/**** FOOTER ****/
 
-footer {
-    background-color: #8b795d;
+/***** MOBILE MEDIA QUERY *****/
+
+@media only screen and (max-width: 768px) {
+    
+    /** HEADER **/
+
+    .mobile_hamburguer {
+        display: block;
+    }
+
+    .mobile_hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile_hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .mobile_hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav_list {
+        position: fixed;
+        left: -100%;
+        top: 69px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100vw;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav_list .nav_item {
+        margin: 16px 0;
+        padding: 10px 0;
+    }
+
+    .nav_list.active {
+        left: 0;
+    }
+
+    /** END **/
+
+
+    /** FOOTER **/
+
+    .footer_container .footer_content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer_content .footer_menu,
+    .footer_content .location {
+        margin-bottom: 40px;
+    }
+
+    /** END **/
+
+
+
+     /** BANNER **/
+
+     .banner_text .text h1 {
+        font-size: 30px; 
+    }
+
+    .banner_text .text h3 {
+        font-size: 15px;
+    }
+
+    .home .banner {
+        flex-direction: column;
+    }
+
+    .banner.first-banner img,
+    .banner.second-banner img {
+        display: none;
+    }
+
+    .banner.first-banner .banner_image{
+        height: 350px;
+        background: url(images/banner-clinic.jpg) center/cover no-repeat;
+        width: 100vw;
+    }
+
+    .banner.second-banner .banner_image{
+        height: 350px;
+        background: url(images/banner-study.jpg) center/cover no-repeat;
+        width: 100vw;
+    }
+
+    .main_button button,
+    .banner_text .text,
+    .banner_text p {
+        margin-bottom: 40px;
+    }
+
+    .banner_nav_buttons button {
+        top: 47%; 
+    }
+
+
+    .main_button button {
+        font-size: 17px; 
+    }
+
+    /** END **/
+
+
+    /** O INSTITUTO **/
+
+    .about_instituto_container {
+        flex-direction: column-reverse;
+    }
+
+    .about_instituto_texting {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .about_text p {
+        text-align-last: center;
+    }
+
+    .about_instituto_carousel {
+        margin: 0 auto;
+    }
+
+    .carousel img {
+        width: 100vw !important;
+        max-height: 350px;
+    }
+
+    .our_services_container .services {
+        flex-direction: column;
+    }
+
+    /** END **/
 }
-
-.footer_container {
-    padding: 30px 15px;
-}
-
-.footer_container ul {
-    list-style: none; 
-}
-
-.footer_container a {
-    text-decoration: none;
-}
-
-.footer_container .footer_content {
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1000px;
-    padding: 30px 0;
-    margin: 0 auto;
-}
-
-.footer_content .footer_headers {
-    color: #42210B;
-}
-
-.address a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    letter-spacing: 2px;
-    color: #000000;
-    line-height: 30px;
-}
-
-.address svg {
-    width: 100%;
-    max-width: 22px;
-}
-
-.footer_nav_item:nth-child(n+2) {
-    padding-top: 20px;
-}
-
-.footer_nav_item a {
-    color: #42210B;
-    letter-spacing: 2px;
-    font-weight: 600;
-}
-
-.footer_nav_item a:hover {
-    border-bottom: 1px solid #42210B;
-}
-
-.social_media  .footer_headers{
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-.social_media ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social_item img {
-    width: 35px;
-}
-
 
 /**** END ****/
 

@@ -1,49 +1,69 @@
 jQuery(document).ready(function(){
 
-    function initializeBannerSlider() {
-        // Get the banner container and all banner sections
-        const bannerSections = $(".banner_container .banner");
-    
-        // Set initial index
-        let currentIndex = 0;
-    
-        // Function to update the transform property based on the current index
-        function updateTransform() {
-            const transformValue = -currentIndex * 100 + "%";
-            bannerSections.each(function (index, section) {
-                $(section).css("transform", "translateX(" + transformValue + ")");
+    // Define the loadContent function
+    function loadContent(page) {
+        $('#main_content_container').fadeOut(400, function() {
+            // Fade out the content, then load the new content from the corresponding folder
+            $(this).load(page + '/' + page + '.html', function() {
+                // Fade in the new content after loading
+                $(this).fadeIn(400);
+            });
+        });
+    }
+
+    // Function to handle pages to display
+    function handlePagesToDisplay() {
+
+        // Initial load
+        loadContent('home');
+
+        // Click event for navigation links
+        $('.nav_item').each(function() {
+            $(this).click(function(e) {
+                e.preventDefault();
+                var page = $(this).attr('id');
+                fadeOutAndLoadContent(page); // You can uncomment this line once you've defined fadeOutAndLoadContent
+            });
+        });
+
+        // Function to load content into the main div with fade effect
+        function fadeOutAndLoadContent(page) {
+            $('#main_content_container').fadeOut(400, function() {
+                // Fade out the content, then load the new content from the corresponding folder
+                $(this).load(page + '/' + page + '.html', function() {
+                    // Fade in the new content after loading
+                    $(this).fadeIn(400);
+                });
             });
         }
-    
-        // Event listener for the next button
-        $(".next_button").on("click", function () {
-            currentIndex = (currentIndex + 1) % bannerSections.length;
-            updateTransform();
-        });
-    
-        // Event listener for the previous button
-        $(".prev_button").on("click", function () {
-            currentIndex = (currentIndex - 1 + bannerSections.length) % bannerSections.length;
-            updateTransform();
-        });
-    }
-    
-    // Call the function to initialize the banner slider
-    initializeBannerSlider();
-
-
-    // Function to add slick slider to the home page carousel
-    function institutoCarousel() {
-        $('.carousel').slick({
-            autoplay: false,
-            autoplaySpeed: 2000, // Adjust the speed as needed
-            dots: true, // Display navigation dots
-            arrows: true // Display navigation arrows
-        });
     }
 
-    // Call the function
-    institutoCarousel();
+    // Call the function to handle pages to display
+    handlePagesToDisplay();
+
+
+
+    
+
+    function handleMobileMenu() {
+        const mobileHamburger = $('.mobile_hamburguer');
+        const navMenu = $('.nav_list');
+
+        mobileHamburger.on('click', () => {
+            mobileHamburger.toggleClass('active');
+            navMenu.toggleClass('active');
+        });
+
+        $('.nav_item').each(function() {
+            $(this).click(function() {
+                mobileHamburger.removeClass('active');
+                navMenu.removeClass('active');
+            });
+        });
+
+    }
+
+    handleMobileMenu();
     
 });
 
