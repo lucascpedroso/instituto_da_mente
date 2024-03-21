@@ -7,7 +7,7 @@
 /**** HEADER ****/
 
 header {
-    padding: 20px 0;
+    padding: 5px 0;
     position: fixed;
     width: 100vw;
     top: 0;
@@ -25,10 +25,6 @@ header .heading {
     margin: 0 20px;
 }
 
-
-header .heading .logo {
-    padding-right: 50px;
-}
 
 
 nav ul.nav_list {
@@ -77,7 +73,7 @@ nav ul.nav_list {
 /**** MAIN ****/
 
 main.main_container {
-    margin-top: 70px;
+    margin-top: 108px;
     background-color: #fffbf5;
     height: 100%;
 }
@@ -173,10 +169,11 @@ footer {
 .home .banner_container {
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 
 .home .banner {
-    padding-top: 40px;
+    padding: 40px 20px 0;
     display: flex;
     align-items: start;
     justify-content: space-evenly;
@@ -283,7 +280,7 @@ footer {
     display: flex;
     align-items: start;
     justify-content: center;
-    padding-top: 100px;
+    padding: 100px 20px 0;
 }
 
 .about_instituto_texting {
@@ -369,6 +366,44 @@ footer {
 
 /**** END ****/
 
+@media screen and (max-width: 1100px) {
+
+    .banner_text .text,
+    .banner_text p {
+        margin-bottom: 50px;
+    }
+    .banner_text .text h1  {
+        font-size: 50px;
+    }
+}
+
+
+/***** TABLET MEDIA QUERY *****/
+
+@media screen and (max-width: 992px) {
+    .banner_text .text h1 {
+        font-size: 40px;
+    }
+
+    .banner_text .text,
+    .banner_text p {
+        margin-bottom: 40px;
+    }
+
+    .about_instituto_container {
+        align-items: center;
+    }
+
+    .nav_list .nav_item {
+        padding-left: 30px;
+    }
+
+    header .heading {
+        margin: 0 16px;
+    }
+}
+/**** END ****/
+
 
 
 /***** MOBILE MEDIA QUERY *****/
@@ -447,6 +482,7 @@ footer {
 
     .home .banner {
         flex-direction: column;
+        padding: 40px 0 0;
     }
 
     .banner.first-banner img,
@@ -488,6 +524,7 @@ footer {
 
     .about_instituto_container {
         flex-direction: column-reverse;
+        padding: 100px 0px 0;
     }
 
     .about_instituto_texting {
@@ -559,6 +596,37 @@ footer {
 .main_font a {
     font-family: 'Lora', serif;
 }
+
+@media only screen and (max-width: 992px) {
+    .main_font h1 {
+        font-size: 38px;
+    }
+    
+    .main_font h2 {
+        font-size: 30px;
+    }
+    
+    .main_font h3 {
+        font-size: 22px;
+    }
+    
+    .main_font h4 {
+        font-size: 18px;
+    }
+    
+    .main_font h5 {
+        font-size: 15px;
+    }
+    
+    .main_font h6 {
+        font-size: 12px;
+    }
+    
+    .main_font p {
+        font-size: 17px
+    }
+}
+
 
 @media only screen and (max-width: 767px) {
     .main_font h1 {
