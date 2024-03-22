@@ -445,6 +445,59 @@ footer {
 /**** END ****/
 
 
+/**** CONTATO ****/
+
+#contact {
+    padding: 40px 0;
+}
+
+#contact img {
+    max-width: 40px;
+}
+
+#contact .contact_option button {
+    font-size: 18px;
+    min-width: 120px;
+}
+
+.contact_wrapper {
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.contactHeading {
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 36px;
+}
+
+.contactHeading h2 {
+    color: #000000;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.contactHeading p {
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+.contact_option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    gap: 20px;
+    border: 1px solid #8C6239;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/**** END ****/
+
 
 
 @media screen and (max-width: 1100px) {
