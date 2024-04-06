@@ -1,0 +1,77 @@
+<section id="contact" class="main_font">
+
+    <div class="contact_wrapper">
+
+        <div class="contactHeading">
+            <h2>Entre em Contato</h2>
+        
+            <p>Tem alguma dúvida? Entre em contato conosco!</p>
+        </div>
+        
+        <div id="contactOptions">
+            <div class="contact_option">
+                <div class="icon">
+                    <img src="images/contact-icons/whatsapp.png" alt="WhatsApp Icon">
+                </div>
+
+                <div class="contact_opt_text">
+                    <h5>WhatsApp</h5>
+                    <p>Segunda-Sábado<br> Das 8h às 18h.</p>
+                </div>
+
+                <a href="https://wa.me/+5519991607338" class="main_button" target="_blank">
+                    <button>Contatar</button>
+                </a>
+            </div>
+        
+            <div class="contact_option">
+                <div class="icon">
+                    <img src="images/contact-icons/email.png" alt="Email Icon">
+                </div>
+
+                <div class="contact_opt_text">
+                    <h5>Email</h5>
+                    <p>Segunda-Sábado<br> Das 8h às 18h</p>
+                </div>
+
+                <a href="mailto:institutodamenterm@gmail.com" class="main_button">
+                    <button>Enviar</button>
+                </a>
+            </div>
+        </div>
+        
+        <div id="contactFormWrapper">
+            <h3>Formulário de Contato</h3>
+            <form id="contactForm" action="https://formsubmit.co/institutodamenterm@gmail.com" method="POST">
+                <div class="inputWrapper">
+                    <input type="text" id="name" name="name" placeholder="Nome" required>
+                </div>
+                <div class="inputWrapper">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="inputWrapper">
+                    <input type="tel" id="phone" name="phone" placeholder="Telefone">
+                </div>
+                <div class="inputWrapper">
+                    <textarea id="message" name="message" rows="7" placeholder="Mensagem" required></textarea>
+                </div>
+                <div class="inputWrapper main_button">
+                    <button type="submit" disabled>Enviar</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="form_sent_popup_wrapper">
+        <div id="form_sent_popup">
+            <div class="close_popup">
+            </div>
+            <div class="positive"></div>
+            <h2>Menssagem enviada com sucesso!</h2>
+            <h4>Entraremos em contato o mais breve possível.</h4>
+        </div>
+    </div>
+</section>
+
+<script src="contato/contato.js"></script>

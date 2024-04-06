@@ -463,6 +463,7 @@ footer {
 .contact_wrapper {
     max-width: fit-content;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .contactHeading {
@@ -493,6 +494,138 @@ footer {
     margin-bottom: 15px;
     border-radius: 20px;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/**** END ****/
+
+
+/**** CONTATO ****/
+
+#contactFormWrapper {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#contactFormWrapper h3 {
+    padding-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+#contactForm {
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    max-width: 400px;
+}
+
+#contactForm .inputWrapper {
+    width: 100%;
+}
+
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    font-family: 'Lora', serif;
+    letter-spacing: 1px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    resize: none;
+    line-height: 26px;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+}
+
+#contactForm button {
+    width: 100%;
+}
+
+#contactForm button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; 
+}
+
+
+#form_sent_popup_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 9999; /* Ensure it's above other content */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#form_sent_popup {
+    background-color: #fff;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+    margin: 0 10px;
+    position: relative;
+    text-align: center;
+}
+
+#form_sent_popup h2,
+#form_sent_popup  h4 {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#form_sent_popup .positive::before {
+    content: "";
+    height: 20px;
+    width: 44px;
+    border-left: 12px solid #44cd6a;
+    border-bottom: 12px solid #44cd6a;
+    transform-origin: center;
+    display: block;
+    transform: rotate(-45deg);
+}
+
+
+.close_popup {
+    position: absolute;
+    top: 14px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.close_popup:before,
+.close_popup:after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 26px;
+    background-color: #333;
+}
+
+.close_popup:before {
+    transform: rotate(45deg);
+}
+
+.close_popup:after {
+    transform: rotate(-45deg);
 }
 
 
@@ -681,6 +814,14 @@ footer {
 
     .our_services_container .services {
         flex-direction: column;
+    }
+
+    /** END **/
+
+    /** CONTATO **/
+
+    .contact_option a.main_button button{
+        margin: 0;
     }
 
     /** END **/
