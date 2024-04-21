@@ -85,7 +85,7 @@ main.main_container {
 /**** FOOTER ****/
 
 footer {
-    background-color: #8b795d;
+    background-color: #b29c7b;
 }
 
 .footer_container {
@@ -628,6 +628,101 @@ footer {
     transform: rotate(-45deg);
 }
 
+
+/**** END ****/
+
+
+/**** ATENDIMENTO SOCIAL ****/
+
+
+/**** END ****/
+
+
+/**** CURSOS ****/
+
+.course_banner {
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    margin-bottom: 60px;
+    justify-content: center;
+    background-color: #cab187;
+}
+
+.course_banner_img {
+    width: 50%;
+}
+
+.course_banner_text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 40px;
+    gap: 30px;
+    letter-spacing: 1px;
+}
+
+.course_banner .course_banner_img {
+    background: url('./images/course-images/course-banner-page-5699456.jpg') center / cover no-repeat;
+}
+
+.courses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 40px 60px;
+    flex-wrap: wrap;
+}
+
+.course {
+    width: 100%;
+    max-width: 300px;
+    background-color: #cab187;
+}
+
+.course .img_wrapper {
+    position: relative;
+}
+
+.course .img_wrapper img {
+    width: 100%;
+}
+
+.course .img_wrapper .more_detail {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFF;
+    padding: 5px;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+
+.course .img_wrapper .more_detail p {
+    font-size: 13px;
+}
+
+
+.course .course_details {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.course .course_details p,
+.course .course_details h3 {
+    padding-bottom: 10px;
+}
+
+.course .main_button button {
+    background-color: #684b2e;
+    border-color: #684b2e;
+}
 
 /**** END ****/
 
