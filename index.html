@@ -25,16 +25,16 @@
     <header>
         <div class="heading main_font">
             <div class="logo">
-                <img src="images/logo.jpg" alt="Logo">
+                <img src="images/logo-removebg-preview.png" alt="Logo">
             </div>
             <nav>
                 <ul class="nav_list">
-                    <li class="nav_item" id="home"><a href="#">Home</a></li>
-                    <li class="nav_item" id="cursos"><a href="">Cursos</a></li>
-                    <li class="nav_item" id="atendimento"><a href="">Atendimento Social</a></li>
-                    <li class="nav_item" id="blog"><a href="">Blog</a></li>
-                    <li class="nav_item" id="duvidas"><a href="">Dúvidas</a></li>
-                    <li class="nav_item" id="contato"><a href="">Contato</a></li>
+                    <li class="nav_item" page_route="home"><a href="#">Home</a></li>
+                    <li class="nav_item" page_route="cursos"><a href="">Cursos</a></li>
+                    <li class="nav_item" page_route="atendimento"><a href="">Atendimento Social</a></li>
+                    <li class="nav_item hide-element" page_route="blog"><a href="">Blog</a></li>
+                    <li class="nav_item" page_route="duvidas"><a href="">Dúvidas</a></li>
+                    <li class="nav_item" page_route="contato"><a href="">Contato</a></li>
                 </ul>
 
                 <div class="mobile_hamburguer">
@@ -48,6 +48,7 @@
 
     <main class="main_container">
         <div id="main_content_container">
+
             <div class="home main_font">
                 <div class="banner_container">
                     <section class="banner first-banner">
@@ -91,12 +92,12 @@
                 <div class="about_instituto_container">
                     <section class="about_instituto_carousel">
                         <div class="carousel">
-                            <img src="images/banner-clinic.jpg" alt="">
-                            <img src="images/banner-study.jpg" alt="">
-                            <img src="images/banner-clinic.jpg" alt="">
-                            <img src="images/banner-study.jpg" alt="">
-                            <img src="images/banner-clinic.jpg" alt="">
-                            <img src="images/banner-study.jpg" alt="">
+                            <img src="images/clinica/imagem-clinica.jpg" alt="">
+                            <img src="images/clinica/imagem-clinica1.jpg" alt="">
+                            <img src="images/clinica/imagem-clinica2.jpg" alt="">
+                            <img src="images/clinica/imagem-clinica3.jpg" alt="">
+                            <img src="images/clinica/imagem-clinica4.jpg" alt="">
+                            <img src="images/clinica/imagem-clinica5.jpg" alt="">
                         </div>
                     </section>
                         
@@ -140,11 +141,11 @@
                 <div class="footer_menu">
                     <nav>
                         <ul class="footer_nav_list">
-                            <li class="footer_nav_item"><a href="">Cursos</a></li>
-                            <li class="footer_nav_item"><a href="">Atendimento Social</a></li>
-                            <li class="footer_nav_item"><a href="">Blog</a></li>
-                            <li class="footer_nav_item"><a href="">Dúvidas</a></li>
-                            <li class="footer_nav_item"><a href="">Contato</a></li>
+                            <li class="footer_nav_item" page_route="cursos"><a href="">Cursos</a></li>
+                            <li class="footer_nav_item" page_route="atendimento"><a href="">Atendimento Social</a></li>
+                            <li class="footer_nav_item hide-element" page_route="blog"><a href="">Blog</a></li>
+                            <li class="footer_nav_item" page_route="duvidas"><a href="">Dúvidas</a></li>
+                            <li class="footer_nav_item" page_route="contato"><a href="">Contato</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -164,9 +165,9 @@
                 <div class="social_media">
                     <h4 class="footer_headers">Social</h4>
                     <ul>
-                        <li class="social_item"><a href=""><img src="images/footer-icons/instagram_icon.png" alt="Instagram Icon"></a></li>
-                        <li class="social_item"><a href=""><img src="images/footer-icons/whatsApp-icon.png" alt="WhatsApp Icon"></a></li>
-                        <li class="social_item"><a href="mailto:"><img src="images/footer-icons/email_icon.png" alt="Email Icon"></a></li>
+                        <li class="social_item"><a href="https://www.instagram.com/instituto_da_mente/"><img src="images/footer-icons/instagram_icon.png" alt="Instagram Icon"></a></li>
+                        <li class="social_item"><a href="https://wa.me/+5519991607338"><img src="images/footer-icons/whatsApp-icon.png" alt="WhatsApp Icon"></a></li>
+                        <li class="social_item" id="email-icon"><a href="mailto:institutodamenterm@gmail.com"><img src="images/footer-icons/email_icon.png" alt="Email Icon"></a></li>
                     </ul>
                 </div>
             </section>

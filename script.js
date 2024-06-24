@@ -9,13 +9,33 @@ jQuery(document).ready(function(){
         $('.nav_item').each(function() {
             $(this).click(function(e) {
                 e.preventDefault();
-                var page = $(this).attr('id');
+                var page = $(this).attr('page_route');
                 fadeOutAndLoadContent(page); // You can uncomment this line once you've defined fadeOutAndLoadContent
             });
         });
 
+        // Click event for navigation links
+        $('.footer_nav_item').each(function() {
+            $(this).click(function(e) {
+                e.preventDefault();
+                var page = $(this).attr('page_route');
+                fadeOutAndLoadContent(page); // You can uncomment this line once you've defined fadeOutAndLoadContent
+            });
+        });
+
+        // Click event for navigation links
+        $('.link-to-page').each(function() {
+            $(this).click(function(e) {
+                e.preventDefault();
+                var page = $(this).attr('page_route');
+                fadeOutAndLoadContent(page); // You can uncomment this line once you've defined fadeOutAndLoadContent
+            });
+        });
+
+
         // Function to load content into the main div with fade effect
         function fadeOutAndLoadContent(page) {
+
             if(page === 'home') {
                 location.reload();
             } else {

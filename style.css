@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.hide-element {
+    display: none;
+}
+
 /**** HEADER ****/
 
 header {
@@ -66,6 +70,10 @@ nav ul.nav_list {
     transition: all 0.3s ease-in-out;
     background-color: #42210B;
 }
+ 
+.logo img {
+    margin-bottom: -10px;
+}
 
 /**** END ****/
 
@@ -73,7 +81,7 @@ nav ul.nav_list {
 /**** MAIN ****/
 
 main.main_container {
-    margin-top: 108px;
+    margin-top: 100px;
     background-color: #fffbf5;
     height: 100%;
 }
@@ -111,7 +119,8 @@ footer {
 }
 
 .footer_content .footer_headers {
-    color: #42210B;
+    color: black;
+    font-weight: 600;
 }
 
 .address a {
@@ -157,6 +166,10 @@ footer {
 
 .social_item img {
     width: 35px;
+}
+
+#email-icon img {
+    width: 40px;
 }
 
 
@@ -632,11 +645,6 @@ footer {
 /**** END ****/
 
 
-/**** ATENDIMENTO SOCIAL ****/
-
-
-/**** END ****/
-
 
 /**** CURSOS ****/
 
@@ -723,6 +731,120 @@ footer {
     background-color: #684b2e;
     border-color: #684b2e;
 }
+
+/**** END ****/
+
+
+
+/**** ATENDIMENTO SOCIAL ****/
+
+
+
+
+#atendimento_container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+#atendimento_container .main-title {
+    text-align: center;
+    margin-top: 0px;
+    font-size: 2.5em;
+    font-weight: 500;
+
+}
+
+#atendimento_container .section {
+    margin: 40px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#atendimento_container .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#atendimento_container .section-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-weight: 500;
+
+}
+
+#atendimento_container .section-content {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#atendimento_container .section-list {
+    margin-left: 20px;
+    list-style: none; 
+}
+
+#atendimento_container .section-list-item {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    position: relative;
+    padding-left: 25px;
+}
+
+#atendimento_container .section-list-item::before {
+    content: '✔'; /* O símbolo de checkmark */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em; /* Ajusta o tamanho do ícone */
+    color: #42210B; /* Cor do ícone */
+    line-height: 1.2em; /* Alinha o ícone verticalmente com o texto */
+}
+
+#atendimento_container .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#atendimento_container .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para o efeito de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#atendimento_container .section.fade-in {
+    opacity: 1;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #atendimento_container .section {
+        transition: none;
+        transform: none;
+    }
+    #atendimento_container .section.fade-in {
+        animation: none;
+    }
+}
+
 
 /**** END ****/
 
