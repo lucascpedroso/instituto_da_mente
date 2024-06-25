@@ -87,6 +87,10 @@ jQuery(document).ready(function(){
 
     // Call handleMobileMenu function to initialize mobile menu functionality
     handleMobileMenu(); 
+
+    $('.logo').on('click', () => {
+        location.reload();
+    });
     
 });
 

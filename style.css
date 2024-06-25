@@ -73,6 +73,7 @@ nav ul.nav_list {
  
 .logo img {
     margin-bottom: -10px;
+    cursor: pointer;
 }
 
 /**** END ****/
@@ -1045,6 +1046,22 @@ footer {
 }
 
 /**** END ****/
+
+@media screen and (max-width: 600px) {
+    .course_banner_img {
+        display: none;
+    }
+
+    .course_banner_text {
+        padding: 0 16px;
+    }
+
+    .course_banner_text,
+    .course_banner_title {
+        width: 100%;
+        text-align: center;
+    }
+}
 
 /*** DEFAULT FONT FAMILY AND SIZES ***/
 
