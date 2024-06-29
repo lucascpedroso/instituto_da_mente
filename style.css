@@ -174,6 +174,22 @@ footer {
 }
 
 
+#all-rights {
+    text-align: center;
+	padding: 10px;
+	background-color: #a28b68ba;
+}
+
+#all-rights p {
+	font-size: 13px !important;
+}
+
+#all-rights a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+}
+
 /**** END ****/
 
 
@@ -226,8 +242,7 @@ footer {
 .banner_text p {
     width: 100%;
     max-width: 700px;
-    text-align: justify;
-    text-align-last: center;
+    text-align: center;
     margin-bottom: 70px;
     color: #8C6239
 }
@@ -365,6 +380,7 @@ footer {
     border: 1px solid #8c6239;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 318px;
 }
 
 .our_services_container .service_text {
@@ -376,6 +392,10 @@ footer {
 .our_services_container .service h4,
 .our_services_container .service p {
     margin-bottom: 15px ;
+}
+
+.our_services_container .service h4 {
+    text-transform: uppercase;
 }
 
 /**** END ****/
@@ -688,8 +708,13 @@ footer {
 
 .course {
     width: 100%;
-    max-width: 300px;
+    max-width: 380px;
+    min-height: 792px;
     background-color: #cab187;
+}
+
+.course .course_details .main_button button {
+    margin-bottom: 10px !important;
 }
 
 .course .img_wrapper {
@@ -698,6 +723,7 @@ footer {
 
 .course .img_wrapper img {
     width: 100%;
+    height: 250px;
 }
 
 .course .img_wrapper .more_detail {
@@ -726,6 +752,10 @@ footer {
 .course .course_details p,
 .course .course_details h3 {
     padding-bottom: 10px;
+}
+
+.course .course_details p {
+    margin-bottom: 10px;
 }
 
 .course .main_button button {
@@ -1133,6 +1163,12 @@ footer {
     
     .main_font p {
         font-size: 17px
+    }
+}
+
+@media screen and (max-width: 879px) {
+    .course {
+        min-height: 100%;
     }
 }
 
